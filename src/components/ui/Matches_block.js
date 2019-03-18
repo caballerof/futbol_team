@@ -14,7 +14,9 @@ const MatchesBlock = props => {
             <div
               className="icon"
               style={{
-                background: `url(/images/team_icons/${match.localThmb}.png)`
+                background: `url(${process.env.PUBLIC_URL}/images/team_icons/${
+                  match.localThmb
+                }.png)`
               }}
             />
             <div className="team_name">{match.local}</div>
