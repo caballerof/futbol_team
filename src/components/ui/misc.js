@@ -27,3 +27,15 @@ Tag.propTypes = {
   addStyle: PropTypes.object,
   link: PropTypes.string
 };
+
+export const firebaseLopper = snapshot => {
+  const data = [];
+  snapshot.forEach(element => {
+    data.push({
+      id: element.key,
+      ...element.val()
+    });
+  });
+
+  return data;
+};
